@@ -47,6 +47,7 @@
 
 # 操作浏览器
 
+- 这一章节没有尝试成功，尝试了自带的浏览器、replay，playwright的skill等，效果达不到预期.
 
 # 参考
 - [openclaw官网](https://docs.openclaw.ai/zh-CN)
