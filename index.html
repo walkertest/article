@@ -6,6 +6,8 @@
 
     <!-- Core Theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
   </head>
   <body class="loading">
     <div id="app"></div>
@@ -15,14 +17,16 @@
       window.$docsify = {
         //...
         loadSidebar: true,
-        subMaxLevel: 2,
+        sidebarDisplayLevel: 1,
+        subMaxLevel: 4, // 层级
       };
     </script>
 
     <!-- Docsify.js -->
     <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
     <!-- Plugins (optional) -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
   </body>
 </html>
