@@ -1,7 +1,10 @@
 - [博客概述](README.md)
 - tafjava
   - [日志](tafjava/日志.md)
+  - [tcpnodelay引起的40ms耗时](tafjava/tcpnodelay引起的40ms耗时.md)
+  - [负载均衡一致性hash](tafjava/负载均衡一致性hash.md)
 - 系统设计
+  - [eureka管理平台](系统设计/eureka管理平台.md)
   - [设备指纹之建立设备库](系统设计/设备指纹之建立设备库.md)
 - AI
   - [程序员对于openclaw的初体验](ai/openclaw/程序员对于openclaw的初体验.md)
@@ -11,8 +14,11 @@
   - [redis慢查询导致的超时问题](problem/20260309redis慢查询导致的超时问题.md)
   - [直播审核系统超时问题](problem/20260725直播审核系统超时问题.md)
   - [git clone仓库过大问题](problem/20260728-git仓库过大问题.md)
+  - [git批量清理分支](problem/git批量清理分支.md)
+  - [unicode特殊形近字的展示问题](problem/unicode特殊形近字的展示问题.md)
 - 面试
   - [腾讯技术职级的能力要求概述](面试/腾讯技术职级的能力要求概述.md)
   - [校招基础执行岗位面试题目](面试/校招基础执行岗位面试题目和思路.md)
 - 生活
+  - [我的电视剧电影记录](生活经验/我的电视剧电影记录.md)
   - [农民工欠薪起诉全流程](生活经验/农民工欠薪不用怕！自己起诉全流程（附材料清单）.md)
