@@ -8,6 +8,7 @@
   - [设备指纹之建立设备库](系统设计/设备指纹之建立设备库.md)
   - [分布式事务之tcc](系统设计/分布式事务之tcc.md)
   - [常用shell命令](系统设计/shell_tools.md)
+  - [docsify构建博客](系统设计/docsify构建博客.md)
 - AI
   - [程序员对于openclaw的初体验](ai/openclaw/程序员对于openclaw的初体验.md)
   - [使用龙虾定时获取ai热点资讯](ai/openclaw/使用龙虾定时获取ai热点资讯.md)
