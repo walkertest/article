@@ -1,7 +1,9 @@
-# 初始化
+# docsify构建博客
+
+## 初始化
 - docsify init
 
-# 修改index.html
+## 修改index.html
 - 修改目录结构、搜索以及皮肤
 ```
 <!doctype html>
@@ -53,12 +55,12 @@
 </html>
 ```
 
-# 编辑目录结构
+## 编辑目录结构
 - 新建文件：_sidebar.md
 - 整理对应的博客目录
 
 
-# github部署
+## github部署
 - 打开 GitHub 仓库页面，点击 Settings
 - 左侧菜单找到 Pages
 - 在 Source 部分：
@@ -66,7 +68,7 @@
     - Branch 选择 main，目录选择
     - 点击 Save
 
-# gitlab部署
+## gitlab部署
 - 新建文件.gitlab-ci.yml
 ```
 pages:
@@ -85,6 +87,10 @@ pages:
 - 在Settings → Pages 中可以看到访问地址
 
 
-# 新增博客
+## 新增博客
 - 创建markdown的文件
 - 在目录中增加索引即可
+
+
+## QA
+- 文章的第一个标题不显示:https://github.com/iPeng6/docsify-sidebar-collapse/issues/23
