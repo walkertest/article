@@ -93,4 +93,5 @@ pages:
 
 
 ## QA
-- 文章的第一个标题不显示:https://github.com/iPeng6/docsify-sidebar-collapse/issues/23
+- 文章的第一个标题不显示,解决用二级标题，一级标题用作文档标题，参考:https://github.com/iPeng6/docsify-sidebar-collapse/issues/23
+- 目录的折叠，点击会消失，解决方案：sidebar中不要有空行或者多余的空格啥的.
