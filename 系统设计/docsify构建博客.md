@@ -48,6 +48,8 @@
 
     <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
+        <!-- 引入 medium-zoom 插件 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@5/lib/plugins/zoom-image.min.js"></script>
 
 
 
@@ -94,4 +96,5 @@ pages:
 
 ## QA
 - 文章的第一个标题不显示,解决用二级标题，一级标题用作文档标题，参考:https://github.com/iPeng6/docsify-sidebar-collapse/issues/23
-- 目录的折叠，点击会消失，解决方案：sidebar中不要有空行或者多余的空格啥的.
+- 目录的折叠，点击会消失，解决方案：sidebar中不要有空行或者多余的空格啥的
+- markdown文件中跳转一个配置文件的时候，会报404，建议跳转到一个conf的markdown文件，用md文件包装一下
