@@ -14,6 +14,7 @@
   - [使用龙虾定时获取ai热点资讯](ai/openclaw/使用龙虾定时获取ai热点资讯.md)
   - [程序员使用openclaw落地场景](ai/openclaw/程序员使用openclaw的几个落地场景.md)
 - 问题处理
+  - [问题排查经验](problem/问题排查经验.md)
   - [redis慢查询导致的超时问题](problem/20260309redis慢查询导致的超时问题.md)
   - [直播审核系统超时问题](problem/20260725直播审核系统超时问题.md)
   - [git clone仓库过大问题](problem/20260728-git仓库过大问题.md)
