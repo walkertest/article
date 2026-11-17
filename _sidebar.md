@@ -17,10 +17,11 @@
   - [问题排查经验](problem/问题排查经验.md)
   - [redis慢查询导致的超时问题](problem/20260309redis慢查询导致的超时问题.md)
   - [直播审核系统超时问题](problem/20260725直播审核系统超时问题.md)
-  - [git clone仓库过大问题](problem/20260728-git仓库过大问题.md)
+  - [git clone仓库过大问题](problem/20260728-git大仓库如何瘦身.md)
   - [git批量清理分支](problem/git批量清理分支.md)
   - [unicode特殊形近字展示问题](problem/unicode特殊形近字展示问题.md)
   - [BLG大战T1导致应用大规模启动](problem/BLG大战T1导致应用大规模启动.md)
+  - [ai自动分析内存泄露问题](problem/ai自动分析内存泄露问题.md)
 - 面试
   - [腾讯技术职级的能力要求概述](面试/腾讯技术职级的能力要求概述.md)
   - [校招基础执行岗位面试题目](面试/校招基础执行岗位面试题目和思路.md)
