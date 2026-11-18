@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="vendor/docsify-core.min.css">
   <link rel="stylesheet" href="css/docsify-theme-vue.css">
   <link rel="stylesheet" href="vendor/docsify-core-dark.min.css">
-  <link rel="stylesheet" href="vendor/docsify-toc.css">
-  <link rel="stylesheet" href="css/toc-override.css">
 </head>
 <body>
   <div id="app"></div>
@@ -18,17 +16,10 @@
         loadSidebar: true,
         subMaxLevel: 4, // 层级
         collapsibleSidebarGroups: true, // 原生分组折叠，点击分组标题只折叠子菜单
-        toc: {
-            headings: 'h1, h2, h3', // 生成目录的标题层级
-            scope: '.markdown-section', // 在正文区域里找标题
-            title: '目录',
-        },
     }
   </script>
   <!-- Docsify resource -->
   <script src="vendor/docsify.min.js"></script>
   <script src="vendor/docsify-search.min.js"></script>
-  <script src="vendor/docsify-toc-v5-compat.js"></script>
-  <script src="vendor/docsify-toc.js"></script>
 </body>
 </html>
