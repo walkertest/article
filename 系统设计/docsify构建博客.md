@@ -100,9 +100,14 @@ pages:
 
 ### 目录的折叠，点击会消失
 - 解决方案：sidebar中不要有空行或者多余的空格啥的
+- 如果是docify5，注意插件不要混淆使用，用AI就可以解决
 
 ### 文件中跳转配置文件
 - markdown文件中跳转一个配置文件的时候，会报404，建议跳转到一个conf的markdown文件，用md文件包装一下
 
 ### google font字体加载
 - google字体经常加载会失败，覆盖替换为本地字体即可（通过AI）
+
+### sidebar样式404
+- https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.css 
+- 替换为另外一个地址即可：<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/sidebar.min.css" />
