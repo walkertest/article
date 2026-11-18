@@ -11,8 +11,8 @@
 
 # 排查思路
 我们先看看4个关键的时间点的数据（调用链的上报数据中）：（客户端发送时间、服务端收包时间、服务端回包时间、客户端收包时间）
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9eee0366eb964992b7af41c58e94debf.png)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/274d0f53afd54c67b4de891548c33f25.png)
+![在这里插入图片描述](pic/9eee0366eb964992b7af41c58e94debf.png)
+![在这里插入图片描述](pic/274d0f53afd54c67b4de891548c33f25.png)
 发现主要时间在于服务端回包之后，客户端收包这之间的耗时过长.
 可能原因：
 1. 服务端回包到网卡发包之间的耗时过长；
@@ -21,7 +21,7 @@
 ## 抓包
 借助抓包功能，我们可以抓到服务端回包的时间点以及客户端收到包的时间点.
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/225e1c6393a249a6a9d97b2ce73fd0ab.png)
+![在这里插入图片描述](pic/225e1c6393a249a6a9d97b2ce73fd0ab.png)
 
 ```
 client抓包：
@@ -41,7 +41,7 @@ svr抓包：
 *  业务处理完成
 * 丢进回包队列
 * 网络线程从队列取出数据并调用系统socket的write方法去回包.
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/fc78e8d0b61a44dcbd913b3b84eebf68.png)
+![在这里插入图片描述](pic/fc78e8d0b61a44dcbd913b3b84eebf68.png)
 * 上了细化的埋点数据后，我们发现耗时是在调了write方法和网卡发包之间.
 * 也就是调用了write之后，网卡并没有马上发包.
 
@@ -96,12 +96,12 @@ https://www.zhihu.com/question/42308970/answer/246334766
 
 ## write-write-read经典场景的耗时问题
 结合上面的nagle算法和延迟ack，可以看到发送方开启了nagle算法，接收方命中了延迟ack策略，会导致发送方第二次write的时候，一定要延迟40ms才能够发送，在有些场景下，这个是不符合预期的
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8f0fc3b10ae445e1a095885abcd03ffa.png)
+![在这里插入图片描述](pic/8f0fc3b10ae445e1a095885abcd03ffa.png)
 ## 问题case的合理解释
 * 我们这里实际遇到的场景，并不是write-write-read的场景，而是经典的rpc模型，write-read.
 * 具体出现的场景的合理猜测，可以见下图.
 * 其中client是tars cpp服务，默认开启了tcpnodelay，能够立即发送请求包，会触发delay ack； server是tars java服务，默认关闭了tcpnodelay，在第二次响应的时候，要等到第一次响应的ack，才真正发包。这样就导致了发送方的耗时大于服务端的处理耗时的问题（40ms以内）。
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3807b9f250d847bda732a3a416884302.png)
+![在这里插入图片描述](pic/3807b9f250d847bda732a3a416884302.png)
 # 总结
 * rpc的排障能力和效率是衡量很重要的一个指标，本文提到的抓包、rpc事件埋点上报等是非常重要且有效的工具；
 * 在一些奇怪的耗时问题场景中，可以合理怀疑网络拥塞控制算法--nagle算法，在当今网络带宽场景下，rpc等场景建议默认开启tcpnodelay.
